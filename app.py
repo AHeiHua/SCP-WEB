@@ -1,6 +1,5 @@
-# -*- encoding: utf-8 -*-
+#! -*- encoding: utf-8 -*-
 import json
-
 from flask import Flask,render_template,request
 import change as change_new
 import login as login_game

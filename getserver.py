@@ -1,6 +1,7 @@
 import json
 import requests
 import re
+import getms
 url = "http://alobgames.com:8080/getserverlist"
 a = requests.get(url)
 max_text = a.text
@@ -29,6 +30,7 @@ def getlist():
                name1 = re.sub(r"<.*?>", "", name)
             aaaa = text_msg.get(str(i))
             if aaaa != None:
+               ip = aaaa.get('ip')
                tag = aaaa.get("tags")
             if tag == ";notmodded":
                iftags = "是"
@@ -37,7 +39,7 @@ def getlist():
             aaaaa = text_msg.get(str(i))
             if aaaaa != None:
                 player = aaaaa.get("players").split("/")
-
-            serverlist.append(f"服务器名称:{name1}\n是否纯净服:{iftags}\n最大人数:{player[1]}\n当前人数:{player[0]}</br>")
+            ms = getms.getping(ip)
+            serverlist.append(f"服务器名称:{name1}\n是否纯净服:{iftags}\n最大人数:{player[1]}\n当前人数:{player[0]}\n服务器最大延迟:{ms[0]}\n最小延迟:{ms[1]}</br>")
 
     return serverlist
