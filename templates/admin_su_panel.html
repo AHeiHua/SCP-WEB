@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超级管理员面板</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="text-align: center;">超级管理员面板</h1>
+    <hr>
+        <form action="/change_title" method="post" name="change_title">
+            标题更改：<input type="text" name="title">
+            <script>
+                function changetitle() {
+                    var input_text = change_title.title.value;
+                    const xhr = new XMLHttpRequest();
+                    const url = "127.0.0.1:5000/getscp"
+                }
+            </script>
+            <input type="button" value="更改" name="get" onclick="changetitle()">
+        </form>
+</body>
+</html>

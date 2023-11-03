@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>更改用户数据</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站反馈</title>
     <style>
         .title {
             text-align: center;
@@ -21,16 +22,9 @@
     </style>
 </head>
 <body>
-
-<form method="post" action="/change_userdata">
-    需要更改的名字：<input type="text" name="name">
-    </br>
-    需要更改的简介：<input type="text" name="des">
-    </br>
-    <input type="submit" value="更改">
-</form>
-<!--音乐播放器-->
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
-<script src="https://myhkw.cn/player/js/player.js" id="myhk" key="demo" m="1"></script>
+    <form method="post" action="/feedback">
+        请输入反馈：<input type="text" name="feedback">
+        <input type="submit" value="提交">
+    </form>
 </body>
 </html>

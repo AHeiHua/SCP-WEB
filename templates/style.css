@@ -1,0 +1,18 @@
+.title {
+    text-align: center;
+    color:black;
+}
+.box {
+    color: black;
+    text-align: center;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: linear-gradient(to top, #fbc2eb 100%, #a6c1ee 100%);
+}
+h1 {
+    color:white;
+    text-align: center;
+}

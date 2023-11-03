@@ -3,46 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>黑化工具箱 - WEB</title>
+    <style>
+        .title {
+            text-align: center;
+            color:black;
+        }
+        .box {
+            color: black;
+            text-align: center;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-image: linear-gradient(to top, #fbc2eb 100%, #a6c1ee 100%);
+        }
+    </style>
 </head>
 <body>
-<h1>欢迎来到黑化工具箱</h1>
-<h2><i>针对于SCP Classified Site 这款游戏</i></h2>
-<i>以下是本站所有功能:</i>
-<a href="./server">服务器列表</a>
-<a href="./change">更改简介和名字</a>
-<i>没错 没了[doge]</i><br/>
-<i>如果可以的话可以给我点赞助吗 球球啦</i><br/>
-<i>如果你也没钱的话 也可以不赞助的</i><br/>
-<a href="https://cccimg.com/view.php/61f1db0839cc01d43fb90e47eff7494c.png">赞助</a>
-<!--音乐播放器-->
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
-<script src="https://myhkw.cn/player/js/player.js" id="myhk" key="demo" m="1"></script>
-            <center>
-                网站已运行:<span id="run_time" style="color:black"></span>
-            </center>
+    <div class="title">
+        <h1>欢迎来到黑化工具箱</h1>
+        <h2><i>针对于SCP Classified Site 这款游戏</i></h2>
+    </div>
+    <div class="box">
+        <i>以下是本站所有功能:</i><br/>
+        <i>QQ群:<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=_JepVBKyT8J8kE4qIm3DLreoo-cQ2J7P&jump_from=webapi&authKey=qXQTEx1pkbL4ORqpaCzs7afQv6GnpuK/NfSOem6ezOqzGFqOCWos9DM277K1LzDj">点我</a> </i>
+        <br/>
+        <a href="./server">服务器列表</a>
+        <br/>
+        <a href="./change">更改简介和名字</a>
+        <br/>
+        <a href="./admin">管理员必备神器</a>
+        <br/>
+        <a href="./feedback">网站反馈</a>
+        <br/>
+        <i>没错 没了[doge]</i><br/>
+        <i>如果可以的话可以给我点赞助吗 球球啦</i><br/>
+        <i>如果你也没钱的话 也可以不赞助的</i><br/>
+        <a href="https://cccimg.com/view.php/61f1db0839cc01d43fb90e47eff7494c.png">赞助</a>
+        <!--音乐播放器-->
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+        <script src="https://myhkw.cn/player/js/player.js" id="myhk" key="demo" m="1"></script>
+                    <div style="text-align: center;">
+                        网站已运行:<span id="run_time" style="color:black"></span>
+                    </div>
 
-            <script>
-                function runTime() {
-                    var d = new Date(), str = '';
-                    BirthDay = new Date("October 21,2023");
-                    today = new Date();
-                    timeold = (today.getTime() - BirthDay.getTime());
-                    sectimeold = timeold / 1000
-                    secondsold = Math.floor(sectimeold);
-                    msPerDay = 24 * 60 * 60 * 1000
-                    msPerYear = 365 * 24 * 60 * 60 * 1000
-                    e_daysold = timeold / msPerDay
-                    e_yearsold = timeold / msPerYear
-                    daysold = Math.floor(e_daysold);
-                    yearsold = Math.floor(e_yearsold);
-                    //str = yearsold + "年";
-                    str += daysold + "天";
-                    str += d.getHours() + '时';
-                    str += d.getMinutes() + '分';
-                    str += d.getSeconds() + '秒';
-                    return str;
-                }
-                setInterval(function () { $('#run_time').html(runTime()) }, 1000);
-            </script>
+                    <script>
+                        function runTime() {
+                            var d = new Date(), str = '';
+                            BirthDay = new Date("October 21,2023");
+                            today = new Date();
+                            timeold = (today.getTime() - BirthDay.getTime());
+                            sectimeold = timeold / 1000
+                            secondsold = Math.floor(sectimeold);
+                            msPerDay = 24 * 60 * 60 * 1000
+                            msPerYear = 365 * 24 * 60 * 60 * 1000
+                            e_daysold = timeold / msPerDay
+                            e_yearsold = timeold / msPerYear
+                            daysold = Math.floor(e_daysold);
+                            yearsold = Math.floor(e_yearsold);
+                            //str = yearsold + "年";
+                            str += daysold + "天";
+                            str += d.getHours() + '时';
+                            str += d.getMinutes() + '分';
+                            str += d.getSeconds() + '秒';
+                            return str;
+                        }
+                        setInterval(function () { $('#run_time').html(runTime()) }, 1000);
+                    </script>
+    </div>
 </body>
 </html>
