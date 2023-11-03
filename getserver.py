@@ -27,7 +27,6 @@ def getlist():
             a = text_msg.get(str(i))
             if a != None:
                name = a.get("name")
-               name1 = re.sub(r"<color=(\w+)>(.*?)</color>", r'<i style="color:1;">\2<i>', name)
             aaaa = text_msg.get(str(i))
             if aaaa != None:
                ip = aaaa.get('ip')
@@ -40,6 +39,6 @@ def getlist():
             if aaaaa != None:
                 player = aaaaa.get("players").split("/")
             
-            serverlist.append(f"{name1}\n是否纯净服:{iftags}\n最大人数:{player[1]}\n当前人数:{player[0]}</br>")
+            serverlist.append(f"{re.sub(r"<color=(\w+)>(.*?)</color>", r'<i style="color:1;">\2<i>', name)}\n是否纯净服:{iftags}\n最大人数:{player[1]}\n当前人数:{player[0]}</br>")
 
     return serverlist
